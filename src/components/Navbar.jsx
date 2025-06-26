@@ -10,17 +10,19 @@ const Navbar = () => {
         trigger: "nav",
         // start means: when the nav (topside) touches the top of the viewport then start the animation
         // in the start the first part comes from the trigger and second part is of the viewport.
-        start: "bottom top",
+        start: "top top",
+        scrub: true,
       },
     });
     navTween.fromTo(
       "nav",
       {
         backgroundColor: "transparent",
+        ease:'bounce.inOut'
       },
       {
-        backgroundColor: "#000050",
-        backgroundFilter: "blur(10px)",
+        backgroundColor: "#00000050",
+        backdropFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",
       }
